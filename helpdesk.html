@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<meta name="keywords" content="CWA Help Desk Appointment Form">
+	<meta name="description" content="CWA, Help Desk, Appointment, Swinburne">
+<meta name="author" content="Yati Moe">
+<title>CWA Help Desk Appointment</title>
+
+</head>
+<body>
+    <a href="https://www.swinburne.edu.au/"><img src="logo.png" alt="Swinburne Logo" style="width:200px;height:100px;"></a>
+<h1>CWA Help Desk Appointment</h1>
+<p>The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday<br><br>
+Check Blackboard for when CWA tutors will be there.
+</p>
+
+<form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+    <form action="#" method="post">
+        
+        <!-- Student details -->
+        <fieldset>
+            <legend>Student details</legend>
+            
+            <label for="studentid">Student ID</label>
+            <input type="text" id="studentid" name="studentid" 
+                   required pattern="\d{7,10}" 
+                   title="Student ID must be 7–10 digits"><br><br>
+
+            <label for="given_name">Given Name</label>
+            <input type="text" id="given_name" name="given_name" 
+                   maxlength="15" required 
+                   pattern="[A-Za-z]+" 
+                   title="Alphabetical characters only">
+
+            <label for="family">Family Name</label>
+            <input type="text" id="family" name="family" 
+                   maxlength="15" required 
+                   pattern="[A-Za-z]+" 
+                   title="Alphabetical characters only"><br>
+        </fieldset>
+        <!--Unit Selection-->
+		<fieldset>
+            <legend>Your unit</legend>
+            <input type="radio" id="cos10011" name="unit" value="COS10011" required>
+            <label for="cos10011">COS10011</label>
+            <input type="radio" id="cos60004" name="unit" value="COS60004">
+            <label for="cos60004">COS60004</label>
+            <input type="radio" id="cos60007" name="unit" value="COS60007">
+            <label for="cos60007">COS60007</label>
+    
+        <!--Tutor Selection-->
+        <fieldset>
+            <label for="tutor">Your Tutor</label>
+            <select id="tutor" name="tutor" required>
+                <option value="">Please Select</option>
+                <option value="Tutor1">Tutor 1</option>
+                <option value="Tutor2">Tutor 2</option>
+                <option value="Tutor3">Tutor 3</option>
+            </select>
+        </fieldset>
+
+        </fieldset>
+        <!--Issue-->
+        <fieldset>
+        <legend>Issue</legend>
+            <label><input type="checkbox" name="issue[]" value="HTML" checked="checked"> HTML</label>
+            <label><input type="checkbox" name="issue[]" value="CSS"> CSS</label>
+            <label><input type="checkbox" name="issue[]" value="JavaScript"> JavaScript</label>
+            <label><input type="checkbox" name="issue[]" value="PHP"> PHP</label>
+            <label><input type="checkbox" name="issue[]" value="MySQL"> MySQL</label><br><br>
+        
+            <label for="description">Description of Issue</label><br>
+            <textarea id="description" name="description" rows="4" cols="50" 
+                      placeholder="Write description of your problem here..." required></textarea><br>
+        </fieldset>
+
+        <!--Date/Time-->
+        <fieldset>
+            <legend>Preferred Date/Time</legend>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required><br>
+        </fieldset>
+
+	<input type= "submit" value="Book"/>
+	<input type= "reset" value="Reset Form"/>
+</form>
+</body>
+</html>
